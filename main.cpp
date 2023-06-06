@@ -51,21 +51,22 @@ class Menu{
 
 class Pelanggan{
     public:
-        int id;
+        int idPelanggan;
         int total = 0;
         std::vector<Item> pesanan;
-    Pelanggan(int idPelanggan):id(idPelanggan){};
+    Pelanggan(int x):idPelanggan(x){};
+    
     void tambahPesanan(Menu menu){
         int idItem;
         char pilihan;
         do{
             system("CLS");
             menu.printMenu();
-            std::cout << "Pilih pesanan untuk pelanggan " << id << ": " << std::endl;
+            std::cout << "Pilih pesanan untuk pelanggan " << idPelanggan << ": " << std::endl;
             std::cin >> idItem;
             pesanan.push_back(menu.daftarMenu[idItem - 1]);
             total = total + menu.daftarMenu[idItem - 1].harga;
-            std::cout << "Apakah pelanggan " << id << " ingin menambah pesanan?(y/n): ";
+            std::cout << "Apakah pelanggan " << idPelanggan << " ingin menambah pesanan?(y/n): ";
             std::cin >> pilihan;
         } while(pilihan == 'y');
     }
@@ -203,8 +204,22 @@ class Meja{
 int main(){
     //-----------------------Inisialisasi menu
     Menu menu;
-   
-    int jumlahPelanggan = 3;
-    Meja meja(1, jumlahPelanggan, menu);
+    int pilihan;
+    std::cout << "1. Tambah meja" << std::endl;
+    std::cout << "2. Keluar" << std::endl;
+    std::cout << "Masukkan pilihan: ";
+    std::cin >> pilihan;
+    switch(pilihan){
+        case 1:
+        int idMeja;
+        int jumlahPelanggan;
+        std::cout << "Masukkan id meja: ";
+        std:: cin >> idMeja;
+        std::cout << "Masukkan jumlahPelanggan: ";
+        std::cin >> jumlahPelanggan;
+        Meja meja(idMeja, jumlahPelanggan, menu);
+    }
+
+    
     return 0;
 }

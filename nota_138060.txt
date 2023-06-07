@@ -1,0 +1,68 @@
+----------Nota----------
+Id Pemesanan: 138060
+Id Meja: 1
+Jumlah pelanggan: 3
+
+
+Nasi Goreng
+x1			18
+
+Es Teh
+x2			14
+
+Bakso
+x1			15
+
+Kopi
+x1			10
+
+Soto
+x1			15
+
+
+Total:			72
+----------Nota----------
+Id Pemesanan: 138060
+Id Meja: 1
+Id Pelanggan: 1
+
+
+Nasi Goreng
+x1			18
+
+Es Teh
+x1			7
+
+
+Total:			25
+
+----------Nota----------
+Id Pemesanan: 138060
+Id Meja: 1
+Id Pelanggan: 2
+
+
+Bakso
+x1			15
+
+Kopi
+x1			10
+
+
+Total:			25
+
+----------Nota----------
+Id Pemesanan: 138060
+Id Meja: 1
+Id Pelanggan: 3
+
+
+Soto
+x1			15
+
+Es Teh
+x1			7
+
+
+Total:			22
+

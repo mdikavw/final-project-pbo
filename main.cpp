@@ -83,7 +83,7 @@ class Nota{
 
     void printNota(){
         std::ofstream fileNota;
-        fileNota.open("nota.txt", std::fstream::app);
+        fileNota.open("nota_" + std::to_string(idPemesanan) + ".txt", std::fstream::app);
         for(int i = 0; i < daftarPesanan.size() - 1; i++){
             for(int j = i + 1; j < daftarPesanan.size(); j++){
                 if(daftarPesanan[i].idItem == daftarPesanan[j].idItem){
@@ -116,7 +116,7 @@ class Nota{
 
     void printHeader(int x){
         std::ofstream fileNota;
-        fileNota.open("nota.txt", std::fstream::app);
+        fileNota.open("nota_" + std::to_string(idPemesanan) + ".txt", std::fstream::app);
         fileNota << "----------Nota----------" << std::endl;
         std::cout << "----------Nota----------" << std::endl;
         fileNota << "Id Pemesanan: " << idPemesanan << std::endl;
@@ -151,7 +151,7 @@ class NotaIndividu : public Nota{
     }
     void printHeader(int x, int y){
         std::ofstream fileNota;
-        fileNota.open("nota.txt", std::fstream::app); 
+        fileNota.open("nota_" + std::to_string(idPemesanan) + ".txt", std::fstream::app); 
         fileNota << "----------Nota----------" << std::endl;
         std::cout << "----------Nota----------" << std::endl;
         fileNota << "Id Pemesanan: " << idPemesanan << std::endl;
@@ -166,7 +166,7 @@ class NotaIndividu : public Nota{
     }
     void printNota(std::vector<Item> pesanan){
         std::ofstream fileNota;
-        fileNota.open("nota.txt", std::fstream::app);
+        fileNota.open("nota_" + std::to_string(idPemesanan) + ".txt", std::fstream::app);
         for(int i = 0; i < pesanan.size() - 1; i++){
             for(int j = i + 1; j < pesanan.size(); j++){
                 if(pesanan[i].idItem == pesanan[j].idItem){
